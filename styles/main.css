@@ -1,0 +1,138 @@
+      button{
+        font-family: 'Bebas Neue', serif;
+      }
+      body {
+        background-color: rgb(191,226,202);
+      }
+      /*Menubar Styling*/
+      /*The middle borders of the buttons are 4px wide which is annoying*/
+      .menubar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .menubar-option{
+        border: 2px;
+        border-style: solid;
+        text-align: center;
+        background-color: rgb(254,216,143);
+      }
+      .menu-button{
+        background-color: transparent;
+        border: none;
+        color: black;
+        width: 100%;
+        height: 100%;
+        transition: 0.15s;
+      }
+      .menu-button:hover{
+        cursor: pointer;
+        background-color: rgb(1,39,112);
+        color: white;
+      }
+      .menu-button:active{
+        opacity: 80%;
+      }
+      /*Introduction Styling*/
+      .introduction{
+        display: flex;
+        margin-top: 10px;
+      }
+      .intro-left{
+        align-items: center;
+        display: flex;
+        flex: 1;
+      }
+      .intro-left-left{
+        align-items: center;
+      }
+      .intro-left-right{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 20px;
+      }
+      .intro-right{
+        align-items: center;
+        flex: 1;
+        padding-top: 5%;
+      }
+      .intro-blurb{
+        font-family: "Cheese", serif;
+        font-size: 1.2em;
+        list-style-type:square;
+      }
+      .intro-pic{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 250px;
+      }
+      .intro-name{
+        font-family:'Playful Boxes', serif;
+        font-size:3em;
+      }
+      .intro-text{
+        font-family: 'Cheese';
+        font-size: 1.5em;
+      }
+
+      /*Skills and Talents Styling*/
+      .skills-talents{
+        margin-top: 10px;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        border-top-style: solid;
+        border-color: black;
+        border-width: 10px;
+      }
+      .skills-label{
+        font-family: 'Playful Boxes', serif;
+        font-size: 4em;
+        margin-bottom: 0px;
+        margin-top: 10px;
+      }
+      .skill-row{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skill-box{
+        flex: 1;
+        justify-content: center;
+        background-color: rgb(250,128,114);
+        border-radius: 20px;
+        margin-left: 10px;
+        padding-top: 10px;
+      }
+      .icon{
+        width: 100px;
+      }
+      .skill-row-text{
+        font-size: 2em;
+      }
+      
+      .skill{
+        font-family:"Cheese";
+      }
+
+      .contact-me{
+        flex-grow: 1;
+        margin-top: 200px;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        background-color: rgb(196,204,212);
+        display: flex;
+      }
+      .contact-right {
+        padding-left: 20px;
+        margin-top: 15px;
+        flex: 1;
+        text-align: center;
+      }
+      .contacts{
+        margin-top: 5px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+      }
+    

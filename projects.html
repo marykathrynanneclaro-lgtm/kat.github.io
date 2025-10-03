@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mary Kathryn Anne Claro</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href = "styles/projects.css">
+        <style>
+            @font-face {
+                font-family: 'Playful Boxes';
+                src: url(fonts/Playful_Boxes.otf);
+            }
+            @font-face {
+                font-family: 'Cheese';
+                src: url(fonts/Click\ Cheese.otf);
+            }
+            .rock-paper-scissor{
+                background-color: black;
+                margin-left: 10%;
+                margin-right: 10%;
+                display: flex;
+            }
+            .rps-left{
+                flex: 1em;
+            }
+            .rps-right{
+                flex: 1em;
+            }
+            .rps-right-result{
+                color: white;
+            }
+            .rps-right-choice{
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menubar">
+            <div class="menubar-option">
+                <button class = "menu-button" onclick="window.location.href='main.html';">Home</button>
+            </div>
+            <div class="menubar-option" onclick="window.location.href='resume.html'">
+                <button class = "menu-button">Resume</button>
+            </div>
+            <div class="menubar-option">
+                <button class = "menu-button" onclick="window.location.hred='projects.html'">Projects</button>
+            </div>
+        </div>
+        <div class="web-title">
+            <p class="web-title-content">Javascript Showcase</p>
+        </div>
+        <div class="rock-paper-scissor">
+            <div class="rps-left">
+                <button onclick="rockPaperScissor(1)">ROCK</button>
+                <button onclick="rockPaperScissor(2)">PAPER</button>
+                <button onclick="rockPaperScissor(3)">SCISSOR</button>
+            </div>
+            <div class="rps-right">
+                <button class="rps-right-reset">Reset</button>
+                <p class="rps-right-result" id="rps-result">RESULTS</p>
+                <p class="rps-right-choice" id="rps-choices">CHOICES</p>
+            </div>
+        </div>
+    <script>
+        function rockPaperScissor(playerRPS) {
+            let computerRPS = Math.ceil(Math.random()*3);
+            let computerRPSname = "";
+            let playerRPSname = "";
+            if (playerRPS === computerRPS) {
+                if (playerRPS === 1) {
+                    playerRPSname = "Rock"; computerRPSname = "Rock";
+                } else if (playerRPS === 2) {
+                    playerRPSname = "Paper"; computerRPSname = "Paper";
+                } else if (playerRPS === 3) {
+                    playerRPSname = "Scissors"; computerRPSname = "Scissors";
+                }
+                document.getElementById('rps-result').innerHTML = "TIE";
+                document.getElementById('rps-choices').innerHTML = `Your Choice: ${playerRPSname} vs Computer Choice: ${computerRPSname}`;
+            } else {
+                switch (playerRPS) {
+                    case 1:
+                        playerRPSname = "Rock";
+                        if (computerRPS === 2) {
+                            document.getElementById('rps-result').innerHTML = "LOSE";
+                            computerRPSname = "Paper";
+                        } else {
+                            document.getElementById('rps-result').innerHTML = "WIN";
+                            computerRPSname = "Scissors";
+                        }
+                        document.getElementById('rps-choices').innerHTML = `Your Choice: ${playerRPSname} vs Computer Choice: ${computerRPSname}`;
+                        break;
+                    case 2:
+                        playerRPSname = "Paper";
+                        if (computerRPS === 3) {
+                            document.getElementById('rps-result').innerHTML = "LOSE";
+                            computerRPSname = "Scissors";
+                        } else {
+                            document.getElementById('rps-result').innerHTML = "WIN";
+                            computerRPSname = "Rock";
+                        }
+                        document.getElementById('rps-choices').innerHTML = `Your Choice: ${playerRPSname} vs Computer Choice: ${computerRPSname}`;
+                        break;
+                    case 3:
+                        playerRPSname = "Scissors";
+                        if (computerRPS === 1) {
+                            document.getElementById('rps-result').innerHTML = "LOSE";
+                            computerRPSname = "Rock";
+                        } else {
+                            document.getElementById('rps-result').innerHTML = "WIN";
+                            computerRPSname = "Paper";
+                        }
+                        document.getElementById('rps-choices').innerHTML = `Your Choice: ${playerRPSname} vs Computer Choice: ${computerRPSname}`;
+                        break;
+                }
+            }
+        }
+    </script>
+    </body>
+</html>
