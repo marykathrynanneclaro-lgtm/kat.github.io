@@ -39,27 +39,23 @@
       }
       .intro-left{
         align-items: center;
-        display: flex;
         flex: 1;
-      }
-      .intro-left-left{
-        align-items: center;
-      }
-      .intro-left-right{
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin-left: 20px;
+        margin-right: 50px;
       }
       .intro-right{
-        align-items: center;
         flex: 1;
-        padding-top: 5%;
+        display: grid;
+        place-items: center;
+        margin-left: 50px;
       }
-      .intro-blurb{
-        font-family: "Cheese", serif;
-        font-size: 1.2em;
-        list-style-type:square;
+      .intro-right-up{
+        width: 100%;
+        height: 100%;
+      }
+      .intro-right-down{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
       }
       .intro-pic{
         margin-left: auto;
@@ -67,14 +63,26 @@
         display: block;
         width: 250px;
       }
-      .intro-name{
+      .intro-text{
         font-family:'Playful Boxes', serif;
         font-size:3em;
       }
-      .intro-text{
-        font-family: 'Cheese';
-        font-size: 1.5em;
+      .intro-blurb{
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        text-align: justify;
+
+        font-family: 'Cheese', serif;
+        font-size: 1em;
+
+        border-top-style: solid;
+        border-color: black;
+        border-width: 2px;
       }
+
+      
 
       /*Skills and Talents Styling*/
       .skills-talents{
@@ -82,9 +90,6 @@
         text-align: center;
         display: grid;
         grid-template-columns: 1fr;
-        border-top-style: solid;
-        border-color: black;
-        border-width: 10px;
       }
       .skills-label{
         font-family: 'Playful Boxes', serif;
